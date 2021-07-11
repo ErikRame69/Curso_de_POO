@@ -1,8 +1,18 @@
 <?php
+require_once('Account.php');
 class Car {
-    public $id=integer;
-    public $name=string;
-    public $document = string;
-    public $email = string;
-    public $password = string;
+    public $id;
+    public $license;
+    public $driver;
+    public $passenger;
+
+    public function __construct ($license, $driver){
+        $this->license = $license;
+        $this->driver =$driver;
+    }
+
+    public function printDataCar() {
+        echo "Licencia: $this->license Driver: ".$this->driver;
+    }
 }
+?>
